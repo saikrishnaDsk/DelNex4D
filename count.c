@@ -9,9 +9,9 @@ void main()
   while (s[c] != '\0') {
     if (s[c] == 'a' || s[c] == 'A' || s[c] == 'e' || s[c] == 'E' || s[c] == 'i' || s[c] == 'I' || s[c] =='o' || s[c]=='O' || s[c] == 'u' || s[c] == 'U')
       vowels++;
-	else
-	  cons++;
-	c++;
+    else
+      cons++;
+c++;
   }
   printf("%s",strrev(s));
   printf("Number of vowels and consonants in the string: %d %d",vowels,cons);
