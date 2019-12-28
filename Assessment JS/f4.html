@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -88,4 +89,96 @@ table, th, td {
 </table>
 </body>
 
+=======
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+
+function fillData() {
+
+animalsArr=['Tiger','Elephant','Lion','cat','Dog']
+
+
+var dd= document.getElementById("animals");
+
+for(i=0;i<animalsArr.length;i++)
+{
+//console.log(animalsArr[i]);
+var ele=document.createElement('option')
+ele.text=animalsArr[i];
+dd.add(ele,i)
+}
+
+}
+
+
+
+function fillData()
+{
+
+animalsArr=['select','animals','fruits','langs']
+
+
+var dd= document.getElementById("items");
+
+for(i=0;i<animalsArr.length;i++)
+{
+
+var ele=document.createElement('option')
+ele.text=animalsArr[i];
+dd.add(ele,i)
+}
+
+
+
+}
+
+
+
+function fillOpts()
+{
+opts=[['Tiger','Elephant','Lion','cat','Dog'],['apple','banana','mango'],['java','python','c++','php']]
+
+
+var dd= document.getElementById("items");
+
+var ddOpts= document.getElementById("opts");
+
+ddOpts.innerHTML=null;
+
+idx= dd.selectedIndex;
+console.log();
+
+if(idx>0){
+ for(i=0;i<opts[idx-1].length;i++)
+        {
+
+        var ele1=document.createElement('option');
+                ele1.text=opts[idx-1][i];
+        ddOpts.add(ele1,i);     
+        }
+}
+
+}
+</script>
+
+
+<style>
+table, th, td {
+    border: 1px solid black;
+  }
+</style>
+</head>
+
+
+
+<body onload="fillData()">
+
+<table id='dis' onload="fillOpts()">
+    
+</table>
+</body>
+
+>>>>>>> 4f83f9b488d45a121d5ce32bd705dc88085b0941
 </html>
