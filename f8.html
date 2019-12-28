@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<script type="text/javascript">
+function t1(e){
+
+	if(!((e.which >=65 && e.which<=90)||(e.which >=97 && e.which <=122))){
+		e.preventDefault();
+	}
+
+}
+
+function myf1(event) {
+    var x = event.clientX;
+	var y = event.clientY; 
+	var coor = "X coords: " + x + ", Y coords: " + y;
+	document.getElementById("demo").innerHTML = coor;
+}
+
+function myFunction() {
+  var x = document.getElementById('im');
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+function openWin() {
+  window.open("https://www.google.com");
+}
+
+function bt(){
+	alert('BUTTON CLICKED');
+}
+</script>
+<body onclick="myf1(event)">
+
+ENTER ALPHABET: <input type="text" id="t1" onkeypress="t1(event)"><br><br>
+<span style="cursor: pointer;"> POINTER</span><br><br>
+<img src="media/j1.jpg"  width="100px" height="100px" id="im" onclick="myFunction()">
+
+<p  id="demo">COORDINATES</p>
+<input type="button" value="Open Window" onclick="openWin()">
+<button id="but" onclick="bt()">POP-up</button><br><br>
+
+FirstName: <input type="text" id="fn"><br>
+LastName: <input type="text" id="ln"><br>
+
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title> 
+            position of an element 
+        </title> 
+          
+        <!-- scropt to get position -->
+        <script type = "text/javascript"> 
+            function getPositionXY(element) { 
+                var rect = element.getBoundingClientRect(); 
+                document.getElementById('text').innerHTML  
+                = 'X: ' + rect.x + '<br>' + 'Y: ' + rect.y; 
+            } 
+        </script> 
+    </head> 
+      
+    <body  onclick="getPositionXY(this)" id="text"> 
+        
+    </body> 
+</html>    

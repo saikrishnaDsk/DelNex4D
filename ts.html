@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User validation</title>
+	<script>
+		function fillData(){
+			var dd = document.getElementById('education');
+		educationArr = ['select', 'higher education', 'graduation', 'post graduation']
+		for(i=0;i<educationArr.length;i++){
+			var ele = document.createElement('option');
+			ele.text = educationArr[i];
+			dd.add(ele,i);
+		}
+	}
+		function fillOpts(){
+			var dd = document.getElementById('education');
+			opts = [['MPBoard','ICSE','CBSE'],['Computer Science Engineering' , 'Electronic engineering' , 'Bachelor of Arts'],['MTech','ME','MS','MBA']];
+			var ddOpts = document.getElementById("educationsub");
+			ddOpts.innerHTML = null;
+			idx = dd.selectedIndex;
+			console.log();
+			if(idx>0){
+			for(i=0; i<opts[idx-1].length;i++){
+				var ele1 = document.createElement('option');
+				ele1.text = opts[idx-1][i];
+				ddOpts.add(ele1,i);
+			}
+		}
+		}
+		function dobValue(){
+		var d = new Date();
+			var year = d.getFullYear();
+			var mon = d.getMonth()+1;
+			var d = d.getDate();
+				if(d < 10)
+					d = '0'+ d;
+				if(mon <10)
+					d = '0' + mon;
+				var maxyear = year-18;
+				console.log(maxyear);
+				console.log(maxyear + '-'+mon+'-'+d);
+				document.getElementById('dob').max = maxyear + '-'+mon+'-'+d; 
+				
+	}
+	function showPass(){
+		console.log(y);
+		var ele = document.getElementById("pass");
+  		if (ele.type === "password") {
+    		ele.type = "text";
+  		} else {
+    		ele.type = "password";
+  		}
+	}
+	function validate(){
+		var pass = document.getElementById('pass').value;
+		var cpass = document.getElementById('cpass').value;
+		if(!(pass == cpass)){
+			alert('password and confirm password does not match');
+			return false;
+		}
+		else{
+			return true;
+		}
+	}
+	</script>
+	<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=password], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=date], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+div {
+	width : 50%;
+	position: center;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+</head>
+
+
+<body onload = 'fillData()'>
+	<div style="width:800px; margin:0 auto;">
+		<form action = 'ext.html' method = 'Post'>
+		Name: <input type = 'text' id = 'name' required="true" /><br /><br/>
+		Password:<input type = 'password' id = 'pass' required="true" /> <br/><br />
+		<input type="checkbox" onclick="showPass()">Show Password<br/><br />
+		Confirm Password:<input type = 'password' id = 'cpass' required="true" /><br /> <br />
+		Education: <select id = 'education' onchange = 'fillOpts()' required = 'true'>
+		</select>
+		<select id = 'educationsub' required="true">
+		</select>
+		Date of Birth: <input type = 'date' id = 'dob' onclick="dobValue()" required="true" /><br /><br/>
+		<input type = 'submit' value = 'Submit' onclick = 'return validate()'>
+
+	</form>
+	</div> 
+</body>
+</html>
