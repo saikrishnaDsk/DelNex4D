@@ -1,0 +1,31 @@
+package pro1;
+
+public class Test {
+	static int num =0;
+	String brand;
+	String model;
+	String color;
+	double price;
+	
+	public String details(String brand,String model,String color,double price) {
+		String det = "Brand "+brand+" Model "+model+" Color "+color+" Price "+price;
+		return det;
+	}
+//	public Test() {
+//		
+//		// TODO Auto-generated constructor stub
+//		this.brand=brand;
+//		this.model=model;
+//		this.color=color;
+//		this.price=price;
+//	}
+
+	public static void main(String [] args) {
+		Test t = new Test();
+		
+		t.details("Volvo","s60","red",4500000);
+		
+		System.out.println(t.details("Volvo","s60","red",4500000););
+	}
+
+}

@@ -1,0 +1,24 @@
+package pro1;
+
+public class StrReplace {
+	String myreplace(String val,char old,char ne) {
+		
+		char [] c = val.toCharArray();
+		
+		for(int i=0;i<val.length();i++) {
+			
+			if(old==c[i]) {
+				c[i]=ne;
+			}
+		}
+		String res = new String(c);
+		return res;
+	}
+	public StrReplace() {
+		// TODO Auto-generated constructor stub
+	}
+	public static void main(String[] args) {
+		String a;
+		
+	}
+}

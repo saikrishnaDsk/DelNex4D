@@ -1,0 +1,16 @@
+
+package pro1;
+
+
+public class f1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String j = "JOKER";
+		int a = 'A';
+			System.out.println(""+a);
+			System.out.println(""+j);
+		float aa = 10.5f; //<= explict type casting
+	}
+
+}

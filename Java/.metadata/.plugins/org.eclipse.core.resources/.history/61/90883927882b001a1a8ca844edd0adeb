@@ -1,0 +1,29 @@
+package pro1;
+
+public class Test {
+
+	public void hello() {
+		System.out.println("Method Called");
+	}
+	public Test() {
+		System.out.println("Default Const called");
+	}
+	public static void main(String[] args) {
+		Test t = new Test();
+		t.hello();
+
+		int [][] marks = new int [3][];
+		
+		marks[0]=new int[50];
+		marks[1]=new int[40];
+		marks[2]=new int[30];
+		
+		int count=0;
+		for(int [] a :marks) {
+			for(int b:a) {
+				count++;
+			}
+		}
+		System.out.println(count);
+	}
+}

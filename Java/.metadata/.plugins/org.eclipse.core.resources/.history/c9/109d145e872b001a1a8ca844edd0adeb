@@ -1,0 +1,17 @@
+package pro1;
+
+public class Test {
+
+	public void hello() {
+		System.out.println("Method Called");
+	}
+	public Test() {
+		System.out.println("Default Const called");
+	}
+	public static void main(String[] args) {
+		Test t = new Test();
+		t.hello();
+
+		
+	}
+}
