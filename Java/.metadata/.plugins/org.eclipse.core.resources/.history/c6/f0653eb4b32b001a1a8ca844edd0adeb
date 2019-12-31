@@ -108,11 +108,7 @@ public class StrCheck {
 			if(r[p]>='A' && r[p]<='Z') {
 				r[p]=(char)(r[p]+32);
 			}
-		}
-		for(int i=0;i<data.length();i++) {
-			if(c[i]>='A' && c[i]<='Z') {
-				r[i]=(char)(r[i]-32);
-			}
+			
 		}
 		
 		String res = new String(r);
@@ -129,6 +125,6 @@ public class StrCheck {
 		System.out.println("IS DIGIT: "+sc.isDigit("1235"));
 		System.out.println("DIGIT COUNT: "+sc.digitCount("Hell231o"));
 		System.out.println("ZERO COUNT: "+sc.zeroCount("130000"));
-		System.out.println("Reverse Lower: "+sc.revStr("HelloWorld"));
+		System.out.println("Reverse Lower: "+sc.revStr("TEST"));
 	}
 }

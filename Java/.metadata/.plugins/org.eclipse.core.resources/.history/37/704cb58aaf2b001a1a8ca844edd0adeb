@@ -67,9 +67,8 @@ public class StrCheck {
 	}
 	public boolean isDigit (String data) {
 		char [] c = data.toCharArray();
-
 		for(int i=0;i<data.length();i++) {
-			if(!(c[i]>='0' && c[i]<='9')) {
+			if(!(c[i]>=0 && c[i]<=9)) {
 				return false;
 			}
 
@@ -80,7 +79,7 @@ public class StrCheck {
 		char [] c = data.toCharArray();
 		int count=0;
 		for(int i=0;i<data.length();i++) {
-			if(c[i]>='0' && c[i]<='9') {
+			if(c[i]>=0 && c[i]<=9) {
 				count++;
 			}
 		}
@@ -90,33 +89,11 @@ public class StrCheck {
 		char [] c = data.toCharArray();
 		int count=0;
 		for(int i=0;i<data.length();i++) {
-			if(c[i]=='0') {
+			if(c[i]==0) {
 				count++;
 			}
 		}
 		return count;
-	}
-	public String revStr(String data) {
-		char [] c = data.toCharArray();
-		char [] r = new char[data.length()];
-
-		for(int i=0,j=data.length()-1;i<data.length();i++,j--) {
-			r[j]=c[i];
-		}
-		for(int p=0;p<data.length();p++) {
-			
-			if(r[p]>='A' && r[p]<='Z') {
-				r[p]=(char)(r[p]+32);
-			}
-		}
-		for(int i=0;i<data.length();i++) {
-			if(c[i]>='A' && c[i]<='Z') {
-				r[i]=(char)(r[i]-32);
-			}
-		}
-		
-		String res = new String(r);
-		return res;
 	}
 	public static void main(String[] args) {
 		StrCheck sc = new StrCheck();
@@ -126,9 +103,5 @@ public class StrCheck {
 		System.out.println("COUNT CAPS: "+sc.countCaps("Hello"));
 		System.out.println("IS CHAR EQUAL: "+sc.isEqual("C","c"));
 		System.out.println("IS STRING EQUAL: "+sc.isEqual("HELLO","Hello"));
-		System.out.println("IS DIGIT: "+sc.isDigit("1235"));
-		System.out.println("DIGIT COUNT: "+sc.digitCount("Hell231o"));
-		System.out.println("ZERO COUNT: "+sc.zeroCount("130000"));
-		System.out.println("Reverse Lower: "+sc.revStr("HelloWorld"));
 	}
 }

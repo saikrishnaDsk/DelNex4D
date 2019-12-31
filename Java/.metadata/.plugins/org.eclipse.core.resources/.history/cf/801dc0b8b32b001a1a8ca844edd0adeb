@@ -129,6 +129,6 @@ public class StrCheck {
 		System.out.println("IS DIGIT: "+sc.isDigit("1235"));
 		System.out.println("DIGIT COUNT: "+sc.digitCount("Hell231o"));
 		System.out.println("ZERO COUNT: "+sc.zeroCount("130000"));
-		System.out.println("Reverse Lower: "+sc.revStr("HelloWorld"));
+		System.out.println("Reverse Lower: "+sc.revStr("TEST"));
 	}
 }
