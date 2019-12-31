@@ -3,20 +3,20 @@ package pro1;
 public class StrCheck {
 
 	public String hasUpper(String data) {
-
+		
 		char [] c = data.toCharArray();
-
+		
 		for(int i=0;i<data.length();i++) {
 			if(c[i]>='A' && c[i]<='Z') {
 				return "Yes";
 			}
-
+			
 		}return "FALSE";
-
+		
 	}
 	public String hasNumber(String data) {
 		char [] c = data.toCharArray();
-
+		
 		for(int i=0;i<data.length();i++) {
 			if(c[i]>=0 && c[i]<=9) {
 				return "YES";
@@ -34,8 +34,8 @@ public class StrCheck {
 			return true;
 		}
 		else
-			return false;
-
+		return false;
+		
 	}
 	public int countCaps(String data) {
 		char [] c = data.toCharArray();
@@ -47,7 +47,7 @@ public class StrCheck {
 		return ctr;
 	}
 	public boolean isEqual(char c1,char c2) {
-
+		
 		if(c1==c2) {
 			return true; 
 		}
@@ -59,7 +59,7 @@ public class StrCheck {
 		return false;
 	}
 	public boolean isEqual(String str1,String str2) {
-
+		
 		if(str1.equalsIgnoreCase(str2)) {
 			return true; 
 		}
@@ -73,5 +73,6 @@ public class StrCheck {
 		System.out.println("COUNT CAPS: "+sc.countCaps("Hello"));
 		System.out.println("IS CHAR EQUAL: "+sc.isEqual("C","c"));
 		System.out.println("IS STRING EQUAL: "+sc.isEqual("HELLO","Hello"));
+//		System.out.println(sc.hasNumber("Hello123"));
 	}
 }
