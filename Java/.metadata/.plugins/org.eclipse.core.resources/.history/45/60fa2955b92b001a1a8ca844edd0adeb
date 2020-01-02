@@ -1,0 +1,11 @@
+package pro1;
+
+public class Ovd {
+
+	public Ovd() {
+		// TODO Auto-generated constructor stub
+	}
+	public static void main(String[] args) {
+		System.out.println("HOLA");
+	}
+}

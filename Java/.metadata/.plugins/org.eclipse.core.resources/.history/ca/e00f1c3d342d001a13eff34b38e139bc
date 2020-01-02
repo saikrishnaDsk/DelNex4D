@@ -1,0 +1,21 @@
+package pro1;
+
+interface PhoneNumber{
+	public boolean numberFormat(String number);
+}
+public class Country implements PhoneNumber {
+
+	public Country() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public boolean numberFormat(String number) {
+		
+		
+		return true;
+	}
+	public static void main(String[] args) {
+		Country country = new Country();
+		country.numberFormat("+91");
+	}
+}

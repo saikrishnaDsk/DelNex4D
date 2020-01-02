@@ -104,7 +104,7 @@ public class StrCheck {
 			r[j]=c[i];
 		}
 		for(int p=0;p<data.length();p++) {
-			
+
 			if(r[p]>='A' && r[p]<='Z') {
 				r[p]=(char)(r[p]+32);
 			}
@@ -114,7 +114,7 @@ public class StrCheck {
 				r[i]=(char)(r[i]-32);
 			}
 		}
-		
+
 		String res = new String(r);
 		return res;
 	}

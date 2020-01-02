@@ -1,0 +1,39 @@
+package pro1;
+
+interface PhoneNumber{
+	public boolean numberFormat(String number);
+}
+public class Country implements PhoneNumber {
+
+	public Country() {
+
+	}
+
+	public boolean numberFormat(String number) {
+		char [] c = number.toCharArray();
+		
+		for(int i=0;i<number.length();i++) {
+		if(number == "+91") {
+			return true;
+		}
+		else if(number =="+55") {
+			return true;
+		}
+		else if(number=="+47") {
+			return true;
+		}
+		else if(number=="+974") {
+			return true;
+		}
+		else if(number=="+47") {
+			return true;
+		}
+			
+		}
+		return false;
+	}
+	public static void main(String[] args) {
+		Country country = new Country();
+		country.numberFormat("+91");
+	}
+}
