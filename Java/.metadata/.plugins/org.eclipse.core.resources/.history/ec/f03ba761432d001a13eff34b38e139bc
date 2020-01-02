@@ -12,7 +12,7 @@ public class Country{
 		System.out.println(i.numberFormat("+91-8888888888"));
 
 		Brazil b = new Brazil();
-		System.out.println(b.numberFormat("+55 15 99999-9999"));
+		System.out.println(b.numberFormat("+55 15 9999999999"));
 
 		Qatar q = new Qatar();
 		System.out.println(q.numberFormat("+974 3399-9999"));
