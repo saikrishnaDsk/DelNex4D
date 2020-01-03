@@ -1,8 +1,8 @@
 package pro1;
 
-public class Country {
+public class Excep {
 
-	public Country() {
+	public Excep() {
 		// TODO Auto-generated constructor stub
 	}
 
