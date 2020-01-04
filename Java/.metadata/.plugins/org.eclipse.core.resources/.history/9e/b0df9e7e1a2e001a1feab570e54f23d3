@@ -1,0 +1,17 @@
+Rollno	clgid	name	gender	sem	marks
+ 1000	1	'Shikhar'	'Male'	1	60
+ 1001	1	'Rohit'	'Male'	5	70
+ 1002	1	'VIRAT'	'Male'	1	65
+ 1003	1	'priya'	'FeMale'	3	100
+ 1004	1	'neha'	'FeMale'	3	90
+ 1005	2	'Rahul'	'Male'	3	60
+ 1006	2	'MSD'	'Male'	5	70
+ 1007	2	'Bumra'	'Male'	1	65
+ 1008	2	'sakshi'	'FeMale'	5	100
+ 1009	2	'katrina'	'FeMale'	5	90
+ 1010	3	'Disha'	'FeMale'	3	60
+ 1011	3	'Bhuvi'	'Male'	1	70
+ 1012	3	'Shami'	'Male'	3	65
+ 1013	3	'Sunny'	'Male'	3	100
+ 1014	3	'Nisha'	'FeMale'	5	90
+ 1015	3	'sara'	'FeMale'	5	90

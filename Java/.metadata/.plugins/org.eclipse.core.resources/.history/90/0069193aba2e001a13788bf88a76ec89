@@ -1,0 +1,12 @@
+package pro1;
+
+public class Jdbc1 {
+	public static void main(String[] args) {
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			System.out.println("DRIVER LOADED");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+}

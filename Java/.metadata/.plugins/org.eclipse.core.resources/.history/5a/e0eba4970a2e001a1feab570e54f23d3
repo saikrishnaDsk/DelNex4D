@@ -1,0 +1,10 @@
+package pro1;
+
+public class FileTask {
+
+	public static void main(String[] args) {
+		FileReader reader = new FileReader("MyFile.txt");
+		FileWriter writer = new FileWriter("YourFile.txt");
+	}
+
+}

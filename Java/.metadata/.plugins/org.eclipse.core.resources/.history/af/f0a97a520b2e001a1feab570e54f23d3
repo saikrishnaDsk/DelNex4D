@@ -1,0 +1,25 @@
+package pro1;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class FileTask {
+
+	public static void main(String[] args) {
+		try {
+			FileReader reader = new FileReader("data.txt");
+			
+		} catch (FileNotFoundException e) {
+			
+			e.printStackTrace();
+		}
+		try {
+			FileWriter writer = new FileWriter("YourFile.txt");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

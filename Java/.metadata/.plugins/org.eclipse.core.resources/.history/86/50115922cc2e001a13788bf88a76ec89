@@ -1,0 +1,8 @@
+package pro1;
+
+public class revStr {
+	public static void main(String[] args) {
+		revStr rs = new revStr();
+		rs.revS("This is the world of java");
+	}
+}
