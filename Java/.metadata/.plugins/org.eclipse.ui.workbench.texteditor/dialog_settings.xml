@@ -1,17 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="bookNum"/>
+		<item key="selection" value="w1"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="word"/>
+			<item value="reverseWord"/>
+			<item value="words"/>
+			<item value="reversedString"/>
 			<item value="rollNo"/>
 			<item value="Test"/>
 		</list>
 		<list key="replacehistory">
+			<item value="w1"/>
+			<item value="rw"/>
+			<item value="w"/>
+			<item value="rs"/>
+			<item value=""/>
 			<item value="bookNum"/>
 			<item value="Car"/>
 		</list>
