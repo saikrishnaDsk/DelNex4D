@@ -11,14 +11,12 @@ public class Jdbc1 {
 			System.out.println("DRIVER LOADED");
 			Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","delnex4d","pass");
 			
-			String sql = "insert into college values(111,'jdbc',0)";
+			String sql = "insert into college values(111,'jdbc',0)");
 			PreparedStatement stat = conn.prepareStatement(sql);
 			stat.executeUpdate();
 			
 			System.out.println("Connected");
-		} 
-		
-		catch (Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
