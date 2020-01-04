@@ -17,8 +17,12 @@ public class Showroom {
 
 
 		Car1 cc1 = cr.get("Volvo");
-
+		Car1 cc2 = cr.get("BMW");
+		Car1 cc3 = cr.get("SKODA");
+		
 		System.out.println(cc1);
+		System.out.println(cc2);
+		System.out.println(cc3);
 	}
 
 }
