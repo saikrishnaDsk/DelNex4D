@@ -1,10 +1,11 @@
-package com.myjdbc.model;
+package com.myjdbc.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 import com.myjdbc.dbutil.DbConnection;
+import com.myjdbc.model.Customer;
 
 public class CustomerDao {
 	String genCustId(String fname,String lname)

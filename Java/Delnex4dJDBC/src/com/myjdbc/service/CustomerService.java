@@ -1,8 +1,9 @@
 package com.myjdbc.service;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import com.myjdbc.dao.CustomerDao;
 import com.myjdbc.model.Customer;
-import com.myjdbc.model.CustomerDao;
 
 public class CustomerService {
 
