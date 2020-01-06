@@ -11,38 +11,80 @@ public class StudentDao {
 
 	public Student getStudById(int studentId)
 	{
-	try
-	{
+		try
+		{
 
-	Connection con=DbConnection.getConnection();
-	String sql="select * from student where sid=?";
-	PreparedStatement stat= con.prepareStatement(sql);
+			Connection con=DbConnection.getConnection();
+			String sql="select * from student where sid=?";
+			PreparedStatement stat= con.prepareStatement(sql);
 
-	stat.setInt(1, studentId);
+			stat.setInt(1, studentId);
 
-	ResultSet rs = stat.executeQuery();
+			ResultSet rs = stat.executeQuery();
 
-	if(rs.next())
-	{
-	Student stud=new Student();
+			if(rs.next())
+			{
+				Student stud=new Student();
 
-	stud.setStudentId(rs.getInt("sid"));
-	stud.setCollegeCode(rs.getInt("ccode"));
-	stud.setStudentName(rs.getString("sname"));
-	stud.setGender(rs.getString("gender"));
-	stud.setSem(rs.getInt("sem"));
-	stud.setMarks(rs.getInt("marks"));
+				stud.setStudentId(rs.getInt("sid"));
+				stud.setCollegeCode(rs.getInt("ccode"));
+				stud.setStudentName(rs.getString("sname"));
+				stud.setGender(rs.getString("gender"));
+				stud.setSem(rs.getInt("sem"));
+				stud.setMarks(rs.getInt("marks"));
 
-	return stud;
+				return stud;
+			}
+
+
+
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return null;
 	}
 
+	public String updateStudent(int studentId,Student student) {
 
+		try {
+			Student oldData=getStudById(studentId);
+			Connection con=DbConnection.getConnection();
+			String sql="update student set ccode=?,sname=?,gender=?,sem=?,marks=? where sid=?";
+			PreparedStatement stat= con.prepareStatement(sql);
+			stat.setInt(6, studentId);
 
-	}
-	catch (Exception e) {
-	e.printStackTrace();
-	}
+			if(student.getCollegeCode()==0 ) {
+				student.setCollegeCode(oldData.getCollegeCode());
+			}
+			if(student.getSem()==0){
+				student.setSem(oldData.getSem());
+			}
+			if(student.getMarks()==0) {
+				student.setMarks(oldData.getMarks());
+			}
+			if(student.getStudentName()==null) {
+				student.setStudentName(oldData.getStudentName());
+			}
+			if(student.getGender()==null) {
+				student.setGender(oldData.getGender());
+			}
+			stat.setInt(1, student.getCollegeCode());
+			stat.setString(2, student.getStudentName());
+			stat.setString(3, student.getGender());
+			stat.setInt(4, student.getSem());
+			stat.setInt(5, student.getMarks());
+			
+			int res=stat.executeUpdate();
+			if(res>0)
+				return "rec updated";
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			return "Failed";
+		}
 
-	return null;
+		return "Fail";
 	}
 }

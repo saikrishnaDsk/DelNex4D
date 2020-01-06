@@ -1,14 +1,14 @@
 package com.myjdbc.model;
 
 public class Student {
-	
+
 	private int studentId;
 	private int collegeCode;
 	private String studentName;
 	private String gender;
 	private int sem;
 	private int marks;
-		
+
 	public int getStudentId() {
 		return studentId;
 	}
@@ -66,7 +66,7 @@ public class Student {
 		this.sem = sem;
 		this.marks = marks;
 	}
-	
+
 	public Student() {
 		super();
 	}
@@ -77,5 +77,5 @@ public class Student {
 				+ ", gender=" + gender + ", sem=" + sem + ", marks=" + marks + "]";
 	}
 
-	
+
 }
