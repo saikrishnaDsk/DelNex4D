@@ -8,9 +8,7 @@ public class Student {
 	private String gender;
 	private int sem;
 	private int marks;
-	
-	
-	
+		
 	public int getStudentId() {
 		return studentId;
 	}
