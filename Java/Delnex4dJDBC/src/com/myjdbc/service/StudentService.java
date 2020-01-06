@@ -7,8 +7,7 @@ public class StudentService {
 
 	public static void main(String[] args) {
 
-		Student student = new Student(211,3,"Mohan","Male",7,100);
-
+		Student student = new Student(101,1,"RAJA","Male",7,100);
 		StudentDao dao = new StudentDao();
 		String res = dao.saveStudent(student);
 
