@@ -1,45 +1,49 @@
 package com.myjdbc.model;
 
 public class Car {
-	String brand;
-	String model;
-	String color;
-	double price;
-	public String getBrand() {
-		return brand;
-	}
-	public void setBrand(String brand) {
-		this.brand = brand;
-	}
-	public String getModel() {
-		return model;
-	}
-	public void setModel(String model) {
-		this.model = model;
-	}
-	public String getColor() {
-		return color;
-	}
-	public void setColor(String color) {
-		this.color = color;
-	}
-	public double getPrice() {
-		return price;
-	}
-	public void setPrice(double price) {
-		this.price = price;
+	private String name;
+	private int serialNo;
+	private String maker;
+	
+	public Car() {
+		super();
 	}
 
-	public Car(String brand, String model, String color, double price) {
+	public Car(String name, int serialNo, String maker) {
 		super();
-		this.brand = brand;
-		this.model = model;
-		this.color = color;
-		this.price = price;
+		this.name = name;
+		this.serialNo = serialNo;
+		this.maker = maker;
 	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getSerialNo() {
+		return serialNo;
+	}
+
+	public void setSerialNo(int serialNo) {
+		this.serialNo = serialNo;
+	}
+
+	public String getMaker() {
+		return maker;
+	}
+
+	public void setMaker(String maker) {
+		this.maker = maker;
+	}
+
 	@Override
 	public String toString() {
-		return "Car [brand=" + brand + ", model=" + model + ", color=" + color + ", price=" + price + "]";
+		return "Car [name=" + name + ", serialNo=" + serialNo + ", maker=" + maker + "]";
 	}
-
+	
+	
 }
