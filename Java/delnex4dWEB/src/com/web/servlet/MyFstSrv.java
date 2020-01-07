@@ -30,26 +30,26 @@ public class MyFstSrv extends HttpServlet {
 		// rd.forward(request, response);
 
 
-		  HttpSession session=request.getSession();
+		HttpSession session=request.getSession();
 		session.setAttribute("abc",data);
 		session.setMaxInactiveInterval(5);
 		out.print("<form action='SecondSrv'>");
 		// out.print("<input type='hidden' value='"+data+"' name='uname'>");
 		out.print("<input type='submit' value='next'>");
 		out.print("</form>");
-		
+
 	}
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse response) throws ServletException, IOException {
 
-	PrintWriter out=response.getWriter();
-	out.print("this is post req ");
+		PrintWriter out=response.getWriter();
+		out.print("this is post req ");
 
 
-	String[] countries=req.getParameterValues("country");
+		String[] countries=req.getParameterValues("country");
 
-	for(String country:countries)
-	out.println(country);
+		for(String country:countries)
+			out.println(country);
 
 
 	}
