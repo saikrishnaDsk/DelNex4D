@@ -16,12 +16,10 @@
 <fullyQualifiedTypeName name="com.myjdbc.model.Employee"/>
 <fullyQualifiedTypeName name="com.myjdbc.dao.EmployeeDao"/>
 <fullyQualifiedTypeName name="com.myjdbc.model.Customer"/>
-<fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="com.myjdbc.model.CustomerDao"/>
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
 <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
-<fullyQualifiedTypeName name="java.sql.Date"/>
 <fullyQualifiedTypeName name="com.myjdbc.dao.CarDao"/>
 <fullyQualifiedTypeName name="com.myjdbc.model.Car"/>
 <fullyQualifiedTypeName name="com.myjdbc.dbutil.DbConnection"/>
@@ -32,4 +30,16 @@
 <fullyQualifiedTypeName name="com.myjdbc.dao.UserDao"/>
 <fullyQualifiedTypeName name="com.myserv.model.FeedBack"/>
 <fullyQualifiedTypeName name="com.myserv.dao.FeedDao"/>
+<fullyQualifiedTypeName name="com.myhib.model.Author"/>
+<fullyQualifiedTypeName name="com.myhib.dao.AuthorDao"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="oracle.net.jdbc.TNSAddress.Address"/>
+<fullyQualifiedTypeName name="javax.persistence.Entity"/>
+<fullyQualifiedTypeName name="javax.persistence.Column"/>
+<fullyQualifiedTypeName name="com.hibtask.model.Users"/>
+<fullyQualifiedTypeName name="javax.persistence.Table"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="org.hibernate.Query"/>
+<fullyQualifiedTypeName name="antlr.collections.List"/>
+<fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>
