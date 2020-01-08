@@ -29,7 +29,5 @@ public class FeedDao {
 			e.printStackTrace();
 			return "INSERTION FAILED";
 		}
-
-
 	}
 }

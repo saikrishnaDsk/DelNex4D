@@ -10,8 +10,6 @@
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.Set"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
-<fullyQualifiedTypeName name="com.myjdbc.dbutil.DbConnection"/>
-<fullyQualifiedTypeName name="java.sql.Connection"/>
 <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
 <fullyQualifiedTypeName name="com.myjdbc.model.Student"/>
 <fullyQualifiedTypeName name="com.myjdbc.dao.StudentDao"/>
@@ -26,4 +24,12 @@
 <fullyQualifiedTypeName name="java.sql.Date"/>
 <fullyQualifiedTypeName name="com.myjdbc.dao.CarDao"/>
 <fullyQualifiedTypeName name="com.myjdbc.model.Car"/>
+<fullyQualifiedTypeName name="com.myjdbc.dbutil.DbConnection"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="com.myjdbc.model.User"/>
+<fullyQualifiedTypeName name="com.myjdbc.dao.UserDao"/>
+<fullyQualifiedTypeName name="com.myserv.model.FeedBack"/>
+<fullyQualifiedTypeName name="com.myserv.dao.FeedDao"/>
 </qualifiedTypeNameHistroy>

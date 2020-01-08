@@ -37,6 +37,4 @@ public class FeedBack {
 	public String toString() {
 		return "FeedBack [name=" + name + ", email=" + email + ", message=" + message + "]";
 	}
-
-
 }
