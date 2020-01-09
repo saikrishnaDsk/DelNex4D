@@ -47,7 +47,7 @@ public class EmployeeDao {
 		Session session= factory.openSession();
 		Transaction tx= session.beginTransaction();
 		Criteria cr = session.createCriteria(Employee.class);
-		cr.add(Restrictions.gt("city","B%"));
+		cr.add(Restrictions.ilike("city","B%"));
 
 		List<Employee> results = cr.list();
 
@@ -94,7 +94,7 @@ public class EmployeeDao {
 		Session session= factory.openSession();
 		Transaction tx= session.beginTransaction();
 		Criteria cr = session.createCriteria(Employee.class);
-		Criterion dep1 = Restrictions.gt("dep", "sales");
+		Criterion dep1 = Restrictions.ilike("dep", "sales");
 		Criterion dep2 = Restrictions.ilike("dep","HR");
 		LogicalExpression orExp = Restrictions.or(dep1, dep2);
 		cr.add( orExp );
