@@ -40,7 +40,4 @@ public class User implements Comparable<User>{
 		// TODO Auto-generated method stub
 		return this.uid-u.uid;
 	}
-	
-	
-
 }

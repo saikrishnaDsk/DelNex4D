@@ -3,7 +3,8 @@
 	<session-factory>
 
 		<property name="hibernate.connection.driver_class">oracle.jdbc.OracleDriver</property>
-		<property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:orcl</property>
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:orcl
+		</property>
 		<property name="connection.username">delnex4d</property>
 		<property name="connection.password">pass</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.OracleDialect</property>
@@ -12,8 +13,7 @@
 		<property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
 
 
-		<property name="hbm2ddl.auto">create</property>
-		<mapping class="com.myhib.model.Author"></mapping>
-		<mapping class="com.myhib.model.Address"></mapping>
+		<property name="hbm2ddl.auto">update</property>
+		<mapping class="com.myhib.model.Employee"></mapping>
 	</session-factory>
 </hibernate-configuration>

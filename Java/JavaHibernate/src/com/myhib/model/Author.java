@@ -6,12 +6,16 @@ import javax.persistence.AttributeOverrides;
 import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Author {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@Column(name="authorId",updatable=false,nullable=false)
 	int authorId;
 	String name;
 	int noOfBooks;
@@ -22,7 +26,7 @@ public class Author {
 		@AttributeOverride(name="street",column=@Column(name="Home_Street")),
 		@AttributeOverride(name="city",column=@Column(name="Home_City")),
 		@AttributeOverride(name="state",column=@Column(name="Home_State")),
-})
+	})
 	private Address homeAddress;
 	private Address officeAddress;
 	public int getAuthorId() {
@@ -78,7 +82,7 @@ public class Author {
 	public Author() {
 		super();
 	}
-	
-	
+
+
 
 }
