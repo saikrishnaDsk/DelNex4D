@@ -35,8 +35,6 @@ public class EmployeeService {
 		List<Employee> em4 = dao.getEmployeebyDep();
 		for(Employee l:em4) {
 			System.out.println(l);
-		}
-		
+		}	
 	}
-
 }
