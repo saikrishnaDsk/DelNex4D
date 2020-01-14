@@ -1,0 +1,78 @@
+package com.mysprhib.demo.dao;
+
+import java.util.ArrayList;
+import javax.persistence.*;
+import javax.transaction.Transactional;
+import org.hibernate.*;
+import org.hibernate.Query;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.mysprhib.demo.model.Resturant;
+
+@Transactional
+public class ResturantDao {
+
+	@Autowired
+	SessionFactory sessionFactory;
+	
+	public ResturantDao(SessionFactory sessionFactory) {
+		super();
+		this.sessionFactory = sessionFactory;
+	}
+	public ResturantDao()
+	{
+		
+	}
+	public SessionFactory getSessionFactory() {
+		return sessionFactory;
+	}
+
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+	}
+
+	public void saveResturant(Resturant resturant) {
+		Session session=  sessionFactory.getCurrentSession();
+		session.save(resturant);
+
+	}
+	
+	public ArrayList<Resturant> getAllResturants() {
+		
+		Session session = sessionFactory.getCurrentSession();
+		
+		return (ArrayList<Resturant>)session.createQuery("from Resturant").list();
+		
+	}
+	
+	
+
+	public Resturant deleteResturant(int rid) {
+		Session session=  sessionFactory.getCurrentSession();
+		Resturant resturant = (Resturant) session.get(Resturant.class,rid);
+		session.delete(resturant);
+		
+		return resturant;
+
+	}
+	
+	public Resturant getResturantById(int rid)
+	{
+		Session session = sessionFactory.getCurrentSession();
+	
+		Resturant resturant = (Resturant) session.get(Resturant.class,rid);
+		return resturant;
+	}
+	
+	public ArrayList<Resturant>getResturantByLocation(String location)
+	{
+		Session session = sessionFactory.getCurrentSession();
+	
+		
+		Query query = session.createQuery("from resturant r where r.location=:idk");
+		query.setParameter("idk",location);
+		ArrayList<Resturant> resturant = (ArrayList<Resturant>)query.list();
+		return resturant;
+	}
+
+}

@@ -1,0 +1,27 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page session="false" %>
+<html>
+<head>
+<title>Home</title>
+</head>
+<body>
+
+<h1> Resturant</h1>
+
+
+<table border="2px" width="80%">
+
+<tr> <td>Resturant Id</td> <td> Name </td> <td> Location </td></tr>
+
+
+<tr>
+<td> ${resturant.rid} </td>
+<td> ${resturant.name} </td>
+<td> ${resturant.location} </td>
+</tr>
+
+</c:forEach>
+
+</table>
+</body>
+</html>

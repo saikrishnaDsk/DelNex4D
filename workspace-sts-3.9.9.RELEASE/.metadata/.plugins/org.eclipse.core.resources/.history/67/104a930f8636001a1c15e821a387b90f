@@ -1,0 +1,5 @@
+package com.sprbootdemo.bootMVC.ctrlr;
+
+public class MvcController {
+
+}

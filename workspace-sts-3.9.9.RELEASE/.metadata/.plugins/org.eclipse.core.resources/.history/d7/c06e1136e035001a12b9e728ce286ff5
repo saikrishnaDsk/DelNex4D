@@ -1,0 +1,5 @@
+package com.mysprhib.demo.dao;
+
+public class ResturantDao {
+
+}

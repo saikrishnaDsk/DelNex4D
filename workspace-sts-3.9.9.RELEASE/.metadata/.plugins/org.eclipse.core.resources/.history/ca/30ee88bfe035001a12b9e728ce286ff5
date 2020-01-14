@@ -1,0 +1,22 @@
+package com.mysprhib.demo.dao;
+
+import javax.transaction.Transactional;
+
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.mysprhib.demo.model.Resturant;
+
+@Transactional
+public class ResturantDao {
+
+	@Autowired
+	SessionFactory sessionFactory;
+
+	public static void saveResturant(Resturant resturant) {
+		
+	}
+	
+	
+
+}

@@ -1,0 +1,8 @@
+package com.myspr.demo.bean;
+
+public class Student {
+String rollno;
+int sem;
+int marks;
+int ccode;
+}

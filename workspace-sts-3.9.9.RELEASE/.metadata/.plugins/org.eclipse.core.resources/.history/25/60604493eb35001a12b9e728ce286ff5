@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>deleteResturant</title>
+</head>
+<body>
+<h1>deleteResturant ${rid}</h1>
+<table border="2px" width="80%">
+
+<tr> <td>Resturant Id</td> <td> Name </td> <td> Location </td></tr>
+
+
+<tr>
+<td> ${resturant.rid} </td>
+<td> ${resturant.name} </td>
+<td> ${resturant.location} </td>
+</tr>
+
+</table>
+</body>
+</html>

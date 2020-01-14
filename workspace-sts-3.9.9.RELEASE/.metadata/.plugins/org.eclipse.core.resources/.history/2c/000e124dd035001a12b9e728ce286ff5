@@ -1,0 +1,27 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page session="false"%>
+<html>
+<head>
+<title>Home</title>
+</head>
+<body>
+
+	<h1>Student Reg Page</h1>
+
+
+	<form action="saveStudent">
+
+
+		student id:<input type="text" name="sid"> <br> student
+		Name:<input type="text" name="studentName"> <br> student
+		sem:<input type="text" name="sem"> <br> student gender: <input
+			type="text" name="gender"> <br> student marks:<input
+			type="text" name="marks"> <br> Ccode: <input type="text"
+			name="ccode"> <br> <input type="submit" value="save">
+		<br> <input type="submit" value="getStudents">
+	</form>
+
+
+
+</body>
+</html>

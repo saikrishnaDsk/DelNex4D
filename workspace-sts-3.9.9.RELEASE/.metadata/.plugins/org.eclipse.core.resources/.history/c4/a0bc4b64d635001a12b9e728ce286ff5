@@ -1,0 +1,55 @@
+package com.mysprhib.demo.dao;
+
+import java.util.ArrayList;
+
+import javax.transaction.Transactional;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.mysprhib.demo.model.Student;
+
+@Transactional
+public class StudentDao {
+
+	@Autowired
+	SessionFactory sessionFactory;
+
+	
+	public StudentDao(SessionFactory sessionFactory) {
+		super();
+		this.sessionFactory = sessionFactory;
+	}
+
+	public StudentDao()
+	{
+		
+	}
+	
+
+	public SessionFactory getSessionFactory() {
+		return sessionFactory;
+	}
+
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+	}
+
+	
+	public void saveStudent(Student student)
+	{
+		Session session=  sessionFactory.getCurrentSession();
+		session.save(student);
+		
+	}
+	
+	
+	public ArrayList<Student> getStudent() {
+		Session session = sessionFactory.getCurrentSession();
+		
+		return (ArrayList<Student>)session.createQuery("from student").list();
+		
+	}
+	
+}

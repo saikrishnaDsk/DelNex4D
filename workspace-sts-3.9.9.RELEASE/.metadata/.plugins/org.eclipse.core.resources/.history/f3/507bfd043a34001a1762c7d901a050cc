@@ -1,0 +1,54 @@
+package com.myspr.demo;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Map;
+
+import org.springframework.beans.propertyeditors.CustomDateEditor;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.myspr.demo.bean.Student;
+
+
+@Controller
+public class HomeController {
+
+	@InitBinder
+	public void InitBinder(WebDataBinder binder) {
+		SimpleDateFormat sd = new SimpleDateFormat("yyyy-mm-dd");
+		binder.registerCustomEditor(Date.class, new CustomDateEditor(sd),false);
+	}
+	
+
+	@RequestMapping(value = "/")
+	public String home() {
+		return "home";
+
+	}
+
+	@RequestMapping("saveStudent")
+	public String saveStudent(Model model,@RequestParam() Map<String,String> studsmap) {
+		
+		Student student = new Student();
+
+		String rno = studsmap.get("rno");
+		String sem = studsmap.get("sem");
+		String marks = studsmap.get("marks");
+		String ccode = studsmap.get("ccode");
+
+		student.setRollno(rno);
+		student.setSem(Integer.parseInt(sem));
+		student.setMarks(Integer.parseInt(marks));
+		student.setCcode(Integer.parseInt(ccode));
+
+		model.addAttribute("student", student);
+		
+		return "studdetails";
+	}
+
+}

@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Tue Jan 14 09:27:42 IST 2020
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\admin\\.m2\\repository\\org\\springframework\\spring-web\\4.0.3.RELEASE\\spring-web-4.0.3.RELEASE.jar=C\:\\nexwave\\Deloitte\\Java Batch Only\\sts-bundle\\pivotal-tc-server\\instances\\base-instance\\wtpwebapps\\SprHibdelnex4d\\WEB-INF\\lib\\spring-web-4.0.3.RELEASE.jar
+org.eclipse.jst.jee.server\:SprHibdelnex4d=C\:\\nexwave\\Deloitte\\Java Batch Only\\sts-bundle\\pivotal-tc-server\\instances\\base-instance\\wtpwebapps\\SprHibdelnex4d

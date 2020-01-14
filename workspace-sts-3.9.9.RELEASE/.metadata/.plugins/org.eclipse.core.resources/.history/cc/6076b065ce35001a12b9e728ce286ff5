@@ -1,0 +1,35 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@ page import= "com.mysprhib.demo.model.Student" %>
+<%@ page import= "java.util.ArrayList"  %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Students Data</title>
+</head>
+<body>
+<div class="gett">
+						<table>
+							<tbody>
+								<% ArrayList <Student> student_list = (ArrayList) ;
+									for(Student x : student_list){
+										%>
+										<tr class="row100 body">
+											<td class="cell100 column1" style = "width:13%"><%= x.getSid()%></td>
+											<td class="cell100 column2" style = "width:13%"><%= x.getStudentName()%></td>
+											<td class="cell100 column3" style = "width:13%"><%= x.getCcode() %></td>
+											<td class="cell100 column4" style = "width:13%"><%= x.getGender() %></td>
+											<td class="cell100 column5" style = "width:13%"><%= x.getSem()%></td>
+											<td class="cell100 column6" style = "width:13%"><%= x.getMarks()%></td>
+										</tr>
+										<%
+									}
+								%>
+								
+							</tbody> 
+						</table>
+				</div>
+<p></p>
+</body>
+</html>

@@ -1,0 +1,87 @@
+package com.mysprhib.demo;
+
+import java.util.ArrayList;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.mysprhib.demo.dao.ResturantDao;
+import com.mysprhib.demo.model.Resturant;
+import com.mysprhib.demo.model.Student;
+
+
+@Controller
+public class HomeController {
+	
+	
+//	@Autowired
+//	StudentDao studentDao;
+//
+//	@RequestMapping("/")
+//	public String home()
+//	{
+//		return "studenthome";
+//	}
+//	
+//	
+//	@RequestMapping("saveStudent")
+//	public String saveStudent(@ModelAttribute Student student)
+//	{
+//		
+//		studentDao.saveStudent(student);
+//		
+//		return "home";
+//	}
+//	
+//	@RequestMapping("getStudent")
+//	public String getStudent(Model model)
+//	{
+//		ArrayList<Student> studList = studentDao.getStudent();
+//		model.addAttribute("studList", studList);
+//		return "getstud";
+//	}
+	
+	@Autowired
+	ResturantDao resturantDao;
+	
+	@RequestMapping("/")
+	public String home()
+	{
+		return "resturanthome";
+	}
+
+	@RequestMapping("saveResturant")
+	public String saveResturant(@ModelAttribute Resturant resturant)
+	{
+		
+		resturantDao.saveResturant(resturant);
+		
+		return "resturanthome";
+	}
+	@RequestMapping("getAllResturants")
+	public String getAllResturants(Model model)
+	{
+		ArrayList<Resturant> restlist = resturantDao.getAllResturants();
+		model.addAttribute("restlist", restlist);
+		return "getAllResturants";
+	}
+	@RequestMapping("deleteResturant")
+	public String deleteResturant(Model model,@RequestParam("rid") int rid)
+	{
+		ArrayList<Resturant> resturant = resturantDao.deleteResturant();
+		model.addAttribute("resturant", resturant);
+		return "deleteResturant";
+	}
+	@RequestMapping("getResturantById")
+	public String getResturantById(Model model,@RequestParam("rid") int rid )
+	{
+		Resturant resturant = resturantDao.getResturantById(rid);
+		model.addAttribute("resturant", resturant);
+		return "getResturantById";
+	}
+	
+}

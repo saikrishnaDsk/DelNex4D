@@ -1,0 +1,8 @@
+package com.sprbootdemo.bootMVC.ctrlr;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class MvcController {
+
+}

@@ -1,0 +1,5 @@
+package com.myspr.demo.bean;
+
+public class Student {
+
+}

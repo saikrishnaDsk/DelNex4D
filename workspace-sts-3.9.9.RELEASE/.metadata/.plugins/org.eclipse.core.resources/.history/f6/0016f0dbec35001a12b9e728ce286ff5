@@ -1,0 +1,57 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page session="false"%>
+<html>
+<head>
+<title>Home</title>
+</head>
+<body>
+
+	<h1>Student Reg Page</h1>
+
+
+	<form action="saveResturant">
+
+
+		Resturant id:		<input type="text" name="rid"> <br>
+		Resturant Name:		<input type="text" name="name"> <br>
+		Resturant Location:	<select>
+ 							 <option value="Gachibowli">Gachibowli</option>
+ 							 <option value="Towli Chowki">Towli Chowki</option>
+							 <option value="Q-City">Q-City</option>
+							 <option value="kondapur">kondapur</option>
+						</select><br>
+		
+						<input type="submit" value="Register Resutrant"><br>
+	</form>
+
+	<form action="getAllResturants">
+ 
+						<input type="submit" value="Get All Resturants">
+	</form>
+	<form action="deleteResturant">
+ 		Resturant id:	<input type="text" name="rid"> <br>	
+						<input type="submit" value="Delete Resturant">
+	</form>
+	<form action="getResturantById">
+	 	Resturant id:	<input type="text" name="rid"> <br>				
+						<input type="submit" value="Get ResturantById">
+	</form>
+	<form action="getResturantByLocation">
+	 	Resturant location:	<select>
+ 							 <option value="Gachibowli">Gachibowli</option>
+ 							 <option value="Towli Chowki">Towli Chowki</option>
+							 <option value="Q-City">Q-City</option>
+							 <option value="kondapur">kondapur</option>
+						</select>				
+						<input type="submit" value="Resturant By location">
+	</form>
+	<form action="updateResturant">
+ 						Resturant id:		<input type="text" name="rid"> <br>
+						Resturant Name:		<input type="text" name="name"> <br>
+						Resturant Location:	<input type="text" name="location"> <br>
+		
+						<input type="submit" value="updateResturant"><br>
+	</form>
+
+</body>
+</html>

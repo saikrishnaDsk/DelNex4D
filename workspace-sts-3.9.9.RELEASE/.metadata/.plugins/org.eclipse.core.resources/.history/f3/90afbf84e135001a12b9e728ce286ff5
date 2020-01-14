@@ -1,0 +1,40 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page session="false"%>
+<html>
+<head>
+<title>Home</title>
+</head>
+<body>
+
+	<h1>Student Reg Page</h1>
+
+
+	<form action="saveStudent">
+
+
+		Resturant id:		<input type="text" name="rid"> <br>
+		Resturant Name:		<input type="text" name="name"> <br>
+		Resturant Location:	<input type="text" name="location"> <br>
+		
+						<input type="submit" value="Register Resutrant"><br>
+	</form>
+
+<form action="getallResturants">
+ 
+						<input type="submit" value="Get All Resturants">
+</form>
+<form action="deleteResturant">
+ 
+						<input type="submit" value="Delete Resturant">
+</form>
+<form action="getResturantById">
+ 
+						<input type="submit" value="Get ResturantById">
+</form>
+<form action="getResturantById">
+ 
+						<input type="submit" value="Get ResturantById">
+</form>
+
+</body>
+</html>

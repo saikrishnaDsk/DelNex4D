@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Student details</title>
+</head>
+<body>
+	<h1>Student Details</h1>
+	Student Roll no: ${student.rollno }
+	<br> Student Sem: ${student.sem}
+	<br> Student marks: ${student.marks}
+	<br> Student ccode: ${student.ccode}
+	<br> Student dob: ${student.dob}
+	<br> Student state: ${student.address.state}
+	<br> Student city: ${student.address.city}
+</body>
+</html>
