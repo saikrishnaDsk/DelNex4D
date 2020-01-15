@@ -1,0 +1,5 @@
+package com.example.sprhibboot.dao;
+
+public class UsersDao {
+
+}

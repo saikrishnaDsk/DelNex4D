@@ -1,0 +1,28 @@
+package com.example.sprhibboot.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Table(name="bookDemo")
+@Entity
+public class Book {
+
+	@Id
+	int isbn;
+	public int getIsbn() {
+		return isbn;
+	}
+	public void setIsbn(int isbn) {
+		this.isbn = isbn;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	String name;
+	
+	
+}

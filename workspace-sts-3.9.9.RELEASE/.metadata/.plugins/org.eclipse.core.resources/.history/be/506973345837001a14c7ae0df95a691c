@@ -1,0 +1,28 @@
+package com.example.sprhibboot;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.sprhibboot.dao.CustomersDao;
+import com.example.sprhibboot.model.Customers;
+
+@RestController
+public class AppController {
+//	@Autowired
+//	CustomersDao customersDao;
+	@RequestMapping("/")
+	public String home()
+	{
+		return "home";
+	}
+	
+//	@RequestMapping("saveCustomers")
+//	public String bookSave(@ModelAttribute Customers customer)
+//	{
+//		customer.saveCustomers(customer);
+//		return "home";
+//	}
+//	
+}

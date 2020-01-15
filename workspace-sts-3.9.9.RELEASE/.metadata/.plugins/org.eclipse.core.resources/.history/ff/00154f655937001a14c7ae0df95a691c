@@ -1,0 +1,32 @@
+package com.example.sprhibboot;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class AppController {
+//	@Autowired
+//	CustomersDao customersDao;
+	@RequestMapping("/")
+	public String home()
+	{
+		return "home";
+	}
+	@RequestMapping("SellersSignup")
+	public String sellersignup(){
+		return "SellersSignup";
+	}
+	@RequestMapping("SellersLogin")
+	public String sellerlogin(){
+		return "SellersLogin";
+	}
+	@RequestMapping("CustomersSignup")
+	public String customersignup(){
+		return "CustomerSignup";
+	}
+	@RequestMapping("CustomersLogin")
+	public String customerslogin(){
+		return "CustomersLogin";
+	}
+
+}
