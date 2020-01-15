@@ -1,0 +1,55 @@
+package com.example.sprhibboot;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.example.sprhibboot.dao.CustomersDao;
+import com.example.sprhibboot.dao.SellersDao;
+import com.example.sprhibboot.model.Customers;
+import com.example.sprhibboot.model.Sellers;
+
+@Controller
+public class AppController {
+	@Autowired
+	CustomersDao customersDao;
+	
+	@Autowired
+	SellersDao sellersDao;
+	
+	@RequestMapping("saveCustomer")
+	public String saveCustomer(@ModelAttribute Customers customers){
+		customersDao.saveCustomer(customers);
+		return "CustomerLogin";
+	}
+	@RequestMapping("saveSeller")
+	public String saveSeller(@ModelAttribute Sellers Sellers){
+		SellersDao.saveSeller(Sellers);
+		return "SellerLogin";
+	}
+	@RequestMapping("/")
+	public String home()
+	{
+		return "home";
+	}
+	@RequestMapping("SellerSignup")
+	public String sellersignup(){
+		return "SellerSignup";
+	}
+	@RequestMapping("SellerLogin")
+	public String sellerlogin(){
+		return "SellerLogin";
+	}
+	@RequestMapping("CustomerSignup")
+	public String customersignup(){
+		return "CustomerSignup";
+	}
+	@RequestMapping("CustomerLogin")
+	public String customerslogin(){
+		return "CustomerLogin";
+	}
+	
+	
+
+}

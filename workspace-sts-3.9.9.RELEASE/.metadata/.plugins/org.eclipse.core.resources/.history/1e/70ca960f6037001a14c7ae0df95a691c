@@ -1,0 +1,24 @@
+package com.example.sprhibboot.dao;
+
+import javax.transaction.Transactional;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.example.sprhibboot.model.Sellers;
+
+@Component
+@Transactional
+
+public class SellersDao {
+@Autowired
+SessionFactory sessionfactory;
+
+public void saveCustomer(Sellers sellers)
+{
+	Session session=sessionfactory.getCurrentSession();
+	session.save(sellers);
+}
+}

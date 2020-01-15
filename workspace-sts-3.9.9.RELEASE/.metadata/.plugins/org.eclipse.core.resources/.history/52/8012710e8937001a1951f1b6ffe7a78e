@@ -1,0 +1,11 @@
+package com.example.sprhibboot.dao;
+
+import javax.transaction.Transactional;
+
+import org.springframework.stereotype.Component;
+
+@Component
+@Transactional
+public class ProductDao {
+
+}

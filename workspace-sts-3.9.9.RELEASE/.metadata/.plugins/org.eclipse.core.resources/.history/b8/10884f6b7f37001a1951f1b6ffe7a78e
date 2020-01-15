@@ -1,0 +1,29 @@
+package com.example.sprhibboot;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.example.sprhibboot.dao.BookDao;
+import com.example.sprhibboot.model.Book;
+
+@Controller
+public class HomeController {
+
+	@Autowired
+	BookDao bookDao;
+	@RequestMapping("/")
+	public String home()
+	{
+		return "home";
+	}
+	
+	@RequestMapping("saveBook")
+	public String bookSave(@ModelAttribute Book book)
+	{
+		bookDao.saveBook(book);
+		return "home";
+	}
+	
+}
