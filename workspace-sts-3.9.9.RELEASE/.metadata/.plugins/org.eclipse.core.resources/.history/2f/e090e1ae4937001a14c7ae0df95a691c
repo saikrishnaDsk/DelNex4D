@@ -1,0 +1,20 @@
+package com.sprbootdemo.bootMVC.ctrlr;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.sprbootdemo.bootMVC.bean.Student;
+
+@RestController
+public class MvcController {
+
+	
+	@RequestMapping("cart")
+	public Student home() {
+		Student stud = new Student();
+		stud.setRollno(1);
+		stud.setName("JOKER");
+		return stud;
+		
+	}
+}
