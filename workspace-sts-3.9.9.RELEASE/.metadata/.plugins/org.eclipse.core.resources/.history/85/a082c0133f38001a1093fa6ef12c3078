@@ -1,0 +1,121 @@
+package com.example.sprhibboot;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.example.sprhibboot.dao.CustomerDao;
+import com.example.sprhibboot.dao.ProductDao;
+import com.example.sprhibboot.dao.SellerDao;
+import com.example.sprhibboot.model.Customer;
+import com.example.sprhibboot.model.Product;
+import com.example.sprhibboot.model.Seller;
+
+@Controller
+public class HomeController {
+
+	@Autowired
+	CustomerDao customersDao;
+	
+	@Autowired
+	SellerDao sellersDao;
+	
+	@Autowired
+	ProductDao productDao;
+	
+	Seller sellername;
+	
+	Customer customername;
+	
+//	@RequestMapping("addtocart")
+//	public String addtocart(@ModelAttribute Customer customers){
+//		customersDao.addtocart(customers);
+//		return "CustomerLogin";
+//	}
+//	
+	@RequestMapping("home")
+	public String home()
+	{
+		return "home";
+	}
+//	Product controller
+	@RequestMapping("Products")
+	public String saveProduct(@ModelAttribute Product product){
+		productDao.saveProduct(product);
+		return "Products";
+	}
+	
+	@RequestMapping("uploadproducts")
+	public String uploadproducts(@ModelAttribute Product product){
+		productDao.saveProduct(product);
+		return "UploadProducts";
+	}
+//	Customer controller
+	@RequestMapping("CustomerSignup")
+	public String customersignup(){
+		return "CustomerSignup";
+	}
+	
+	@RequestMapping("CustomerLogin")
+	public String customerlogin(){
+		return "CustomerLogin";
+	}
+	
+	@RequestMapping("customerAuth")
+	public String customerslogin(Model model,@RequestParam String username, String password){
+		Customer customer=customersDao.doValidate(username, password);
+		if(customer== null)
+		{
+			return "home";
+		}
+		else {
+			model.addAttribute("username",customer);
+			customername = customer;
+			return "Cart";
+		}
+		
+	}
+	@RequestMapping("saveCustomer")
+	public String saveCustomer(@ModelAttribute Customer customers){
+		customersDao.saveCustomer(customers);
+		return "CustomerLogin";
+	}
+//seller CONTROLLER
+	
+	@RequestMapping("saveSeller")
+	public String saveSeller(@ModelAttribute Seller sellers){
+		sellersDao.saveSeller(sellers);
+		return "SellerLogin";
+	}
+	
+	
+	@RequestMapping("SellerSignup")
+	public String sellersignup(){
+		
+		return "SellerSignup";
+	}
+	
+	@RequestMapping("sellerAuth")
+	public String sellerlogin(Model model,@RequestParam String username, String password){
+		Seller seller=sellersDao.doValidate(username, password);
+		if(seller==null)
+		{
+			return "home";
+		}
+		else {
+			model.addAttribute("username",seller);
+			sellername = seller;
+			return "UploadProducts";
+		}
+		
+	}
+	
+	@RequestMapping("SellerLogin")
+	public String sellerLogin(){
+		return "SellerLogin";
+	}
+	
+}
