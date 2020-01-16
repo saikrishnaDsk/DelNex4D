@@ -103,6 +103,9 @@
 		<item value="org.springsource.sts:3.9.9.201906181741-RELEASE"/>
 	</list>
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\admin\Desktop\App"/>
+		<item value="C:\Users\admin\Desktop\sprhibboot"/>
+		<item value="C:\Users\admin\Desktop\sprhibbootold"/>
 		<item value="C:\Users\admin\Downloads\sprhibboot"/>
 		<item value="C:\Users\admin\Downloads\bootMVC"/>
 	</list>

@@ -1,0 +1,39 @@
+package com.example.sprhibboot.dao;
+
+import javax.transaction.Transactional;
+
+import org.hibernate.Criteria;
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Restrictions;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.example.sprhibboot.model.Customer;
+
+@Component
+@Transactional
+public class CustomerDao {
+	@Autowired
+	SessionFactory sessionfactory;
+
+
+	public void saveCustomer(Customer customers)
+	{
+		Session session=sessionfactory.getCurrentSession();
+		session.save(customers);
+	}
+	public String doValidate(Sting username,String password)
+	{
+		Session session=sessionfactory.getCurrentSession();
+		Criteria crit=session.createCriteria(Customer.class);
+		crit.add(Restrictions.ilike("username", username));
+		crit.add(Restrictions.eq("pass",password));
+		Customer customer=(Customer) crit.uniqueResult();
+		
+		
+		
+		return "";
+	}
+}

@@ -1,0 +1,113 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Upload Product</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+<link rel="icon" type="image/png"
+	href="Product Upload/images/icons/favicon.ico" />
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css"
+	href="Product Upload/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css"
+	href="Product Upload/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css"
+	href="Product Upload/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css"
+	href="Product Upload/vendor/animate/animate.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css"
+	href="Product Upload/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css"
+	href="Product Upload/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css"
+	href="Product Upload/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css"
+	href="Product Upload/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css"
+	href="Product Upload/css/util.css">
+<link rel="stylesheet" type="text/css"
+	href="Product Upload/css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+<div>
+						<form action="home">
+					<input class="login100-form-btn" align="right" type="submit" value="Logout">
+						</form>
+			</div>
+	<form class="login100-form validate-form flex-sb flex-w"
+		action="Products">
+		<div class="limiter">
+			<div class="container-login100">
+				<div class="wrap-login100 p-t-50 p-b-90">
+
+					<span class="login100-form-title p-b-51"> Upload Product </span>
+					<%-- <div class="wrap-input100 validate-input m-b-16">
+						Seller ID: <input class="input100" type="text"
+							value='${Seller.sid}'>
+					</div> --%>
+					<div class="wrap-input100 validate-input m-b-16"
+						data-validate="ID is required">
+						Seller ID: <input class="input100" type="text" name="sellerid"><br>
+					</div>
+					<div class="wrap-input100 validate-input m-b-16"
+						data-validate="ID is required">
+						Product ID: <input class="input100" type="text" name="pid"><br>
+					</div>
+					<div class="wrap-input100 validate-input m-b-16"
+						data-validate="Name is required">
+						Product NAME: <input class="input100" type="text" name="name"><br>
+					</div>
+					<div class="wrap-input100 validate-input m-b-16"
+						data-validate="image is required">
+						Product Image: <input class="input100" type="text" name="image"><br>
+					</div>
+					<div class="wrap-input100 validate-input m-b-16"
+						data-validate="Quantity is required">
+						Product Quantity: <input class="input100" type="text"
+							name="quantity"><br>
+					</div>
+					<div class="wrap-input100 validate-input m-b-16"
+						data-validate="Price is required">
+						Product Price: <input class="input100" type="text" name="price"><br>
+					</div>
+					<input class="login100-form-btn" type="submit"
+						value="Upload Product">
+							</div>
+			</div>
+		</div>
+	</form>
+						
+	<div id="dropDownSelect1"></div>
+
+	<!--===============================================================================================-->
+	<script src="Product Upload/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="Product Upload/vendor/animsition/js/animsition.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="Product Upload/vendor/bootstrap/js/popper.js"></script>
+	<script src="Product Upload/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="Product Upload/vendor/select2/select2.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="Product Upload/vendor/daterangepicker/moment.min.js"></script>
+	<script src="Product Upload/vendor/daterangepicker/daterangepicker.js"></script>
+	<!--===============================================================================================-->
+	<script src="Product Upload/vendor/countdowntime/countdowntime.js"></script>
+	<!--===============================================================================================-->
+	<script src="Product Upload/js/main.js"></script>
+
+</body>
+</html>
