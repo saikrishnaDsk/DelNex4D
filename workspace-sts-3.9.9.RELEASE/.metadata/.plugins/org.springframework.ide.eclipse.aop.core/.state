@@ -3,5 +3,6 @@
 <aop-project name="SprHibdelnex4d"/>
 <aop-project name="delnexd2mvc"/>
 <aop-project name="delnex4dmvc"/>
+<aop-project name="sprhibboot"/>
 <aop-project name="bootMVC"/>
 </aop-reference-model>
